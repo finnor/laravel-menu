@@ -1,0 +1,31 @@
+.side-menu {
+  .card {
+    margin: 0;
+    border-top: none !important;
+    color: black;
+
+    > .card-header {
+      padding: 0;
+    }
+    a {
+      color: inherit !important;
+      outline: 0;
+    }
+    a:hover, a:visited, a:link, a:active {
+      text-decoration: none;
+      color: inherit !important;
+    }
+    .active-menu-link {
+      background-color: #EEE;
+    }
+    .side-menu-options {
+      margin: 0 -1.25rem;
+      > .dropdown-item:hover {
+        background-color: #D5D5D5;
+      }
+      > .dropdown-item:active:not(:hover){
+        background-color: #FFF;
+      }
+    }
+  }
+}

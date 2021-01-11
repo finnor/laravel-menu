@@ -1,0 +1,26 @@
+{
+    "name": "aflanry/menus",
+    "description": "A menu for us to use",
+    "keywords": ["laravel", "menu", "bootstrap"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrian Flannery",
+            "email": "aflannery@uabmc.edu"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AFlanry\\Menu\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AFlanry\\Menu\\ServiceProvider"
+            ]
+        }
+    }
+}
