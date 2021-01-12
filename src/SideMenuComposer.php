@@ -27,7 +27,7 @@ class SideMenuComposer
                 ->orderBy('menus.menu_parent_id', 'asc')
                 ->orderBy('menus.order', 'asc');
             if(! $user->isAdmin()) {
-                $menus->innerJoin('access_menus', function($join) use ($user) {
+                $menus->join('access_menus', function($join) use ($user) {
                     $join->on('menus.id', '=', 'access_menus.menu_id')
                         ->where('access_menus.group_id', $user->group_id);
                 });

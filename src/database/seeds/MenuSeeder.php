@@ -3,14 +3,18 @@
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 class MenuSeeder extends Seeder
 {
     public function run()
     {
+        Schema::disableForeignKeyConstraints();
         DB::table('menu_domains')->truncate();
         DB::table('access_menus')->truncate();
         DB::table('menus')->truncate();
+        Schema::enableForeignKeyConstraints();
+
         $now = Carbon::now();
         $menus = config('menu.menus');
 
