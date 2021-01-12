@@ -30,6 +30,6 @@ class CreateAccessMenusTable extends Migration
      */
     public function down()
     {
-        Schema::drop('menu_access_lists');
+        Schema::drop('access_menus');
     }
 }

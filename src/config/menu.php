@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'menus' => [
+        // ...
+    ]
+];
 /**
  * Template for building a menu
  *   'menus' => [
@@ -49,4 +53,3 @@ return [
  *   ],
  *   ...
  */
-];

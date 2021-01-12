@@ -1,9 +1,11 @@
 .side-menu {
   .card {
     margin: 0;
-    border-top: none !important;
     color: black;
 
+    .card-body {
+      padding: 0.75rem
+    }
     > .card-header {
       padding: 0;
     }
@@ -28,9 +30,7 @@
       }
     }
   }
-  .btn-block {
-    padding: 0.5rem 1rem;
-    text-decoration: none;
+  .pointer {
     cursor: pointer;
   }
 }

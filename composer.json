@@ -9,9 +9,13 @@
             "email": "aflannery@uabmc.edu"
         }
     ],
+    "require": {
+        "php": ">=7.2",
+        "illuminate/support": "^6|^7|^8"
+    },
     "autoload": {
         "psr-4": {
-            "AFlanry\\Menu\\": "src/"
+            "Aflanry\\Menu\\": "src/"
         }
     },
     "minimum-stability": "dev",
@@ -19,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AFlanry\\Menu\\ServiceProvider"
+                "Aflanry\\Menu\\ServiceProvider"
             ]
         }
     }

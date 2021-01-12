@@ -1,6 +1,6 @@
 <?php
 
-namespace AFlanry\Menu;
+namespace Aflanry\Menu;
 
 class MenuBuilder
 {
@@ -12,11 +12,11 @@ class MenuBuilder
      *
      * @return Collection
      */
-    private static function buildMenu($menus, $isTopOnly = false) {
+    public static function buildMenu($menus, $isTopOnly = false) {
         $topLevel = $menus->filter(function($menu) {
             return is_null($menu->menu_parent_id);
         });
-        return $topLevel->map(function($topMenu) use ($menus) {
+        return $topLevel->map(function($topMenu) use ($menus, $isTopOnly) {
             $topMenu->options = ($isTopOnly) ?
                 collect([]) :
                 $menus->filter(function($menu) use ($topMenu) {
@@ -37,7 +37,7 @@ class MenuBuilder
      *
      * @return Collection
      */
-    private static function setActive($menus, $activeMenu, $actionName) {
+    public static function setActive($menus, $activeMenu, $actionName) {
         // if active menu id is present then set that menu active
         if(! is_null($activeMenu)) {
             $menus->each(function($topMenu, $index) use ($activeMenu, $menus) {

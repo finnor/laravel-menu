@@ -1,10 +1,10 @@
 <?php
 
-namespace AFlanry\Menu;
+namespace Aflanry\Menu;
 
-use AFlanry\Menu\NavMenuComposer;
-use AFlanry\Menu\SideMenuComposer;
-use Illuminate\View\Factory;
+use Aflanry\Menu\NavMenuComposer;
+use Aflanry\Menu\SideMenuComposer;
+use Illuminate\Support\Facades\View;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -13,10 +13,10 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      *
      * @return void
      */
-    public function register(Factory $view)
+    public function register()
     {
-        $view->composer('menu::side_menu', SideMenuComposer::class);
-        $view->composer('menu::nav_menu', NavMenuComposer::class);
+        View::composer('menu::side_menu', SideMenuComposer::class);
+        View::composer('menu::nav_menu', NavMenuComposer::class);
     }
 
     /**
@@ -31,10 +31,10 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         $this->publishes([
             __DIR__.'/views' => resource_path('views/vendor/menu'),
-            __DIR__.'/js' => resource_path('assets/js/vendor/menu'),
-            __DIR__.'/sass' => resource_path('assets/sass/vendor/menu'),
-            __DIR__.'/config/menu.php' => config_path('menu.php')
-            __DIR__.'/database/seeds' => database_path('seeds/vendor/MenuSeeder.php'),
+            __DIR__.'/js' => resource_path('js/vendor/menu'),
+            __DIR__.'/sass' => resource_path('sass/vendor/menu'),
+            __DIR__.'/config/menu.php' => config_path('menu.php'),
+            __DIR__.'/database/seeds' => database_path('seeds/vendor/menu'),
         ]);
     }
 }

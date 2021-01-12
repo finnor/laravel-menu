@@ -1,11 +1,11 @@
 <?php
 
-namespace AFlanry\Menu;
+namespace Aflanry\Menu;
 
-use AFlanry\Menu\MenuBuilder;
-use Illuminate\Routing\Route;
+use Aflanry\Menu\MenuBuilder;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 
 class SideMenuComposer
@@ -44,7 +44,7 @@ class SideMenuComposer
             }
             // Get the menu that should be active
             $domains = DB::table('menu_domains')
-                ->select('type', 'value')
+                ->select('type', 'value', 'menu_id')
                 ->where(function($query) use ($actionName) {
                     $query->where(function($query) use($actionName) {
                         $query->where('type', 'controller')

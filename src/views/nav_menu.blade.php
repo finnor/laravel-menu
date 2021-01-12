@@ -3,7 +3,7 @@
     @foreach($menu as $option)
         <a class="dropdown-item" href="{{(! is_null($option->action)) ? action($option->action) : '#' }}">
             @if(isset($option->icon))
-                <i class="{{$option->icon}}"></i>
+                <i class="{{$option->icon}} pr-1"></i>
                 {{$option->name}}
             @endif
         </a>

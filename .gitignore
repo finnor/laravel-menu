@@ -2,4 +2,5 @@
 /vendor
 .phpunit.result.cache
 .editorconfig
+composer.lock
 scratchpad

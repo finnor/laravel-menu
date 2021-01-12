@@ -21,7 +21,7 @@ Edit config/menu.php using the template with your menu. Then you can seed the da
 php artisan db:seed --class=MenuSeeder
 ```
 
-Finally the sass and javascript for the menus must be added to your bundles
+Next the sass and javascript for the menus must be added to your bundles
 ```sass
 @import("vendor/menu/_menu");
 ```
@@ -30,6 +30,10 @@ Finally the sass and javascript for the menus must be added to your bundles
 require('./vendor/menu/menu');
 ```
 
+Finally include the menu view in your layout!
+```blade
+@include('menu::menu')
+```
 
 
 ### Editing the menu view

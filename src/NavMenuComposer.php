@@ -1,8 +1,8 @@
 <?php
 
-namespace AFlanry\Menu;
+namespace Aflanry\Menu;
 
-use AFlanry\Menu\MenuBuilder;
+use Aflanry\Menu\MenuBuilder;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -44,7 +44,7 @@ class NavMenuComposer
             }
             // Get the menu that should be active
             $domains = DB::table('menu_domains')
-                ->select('type', 'value')
+                ->select('type', 'value', 'menu_id')
                 ->where(function($query) use ($actionName) {
                     $query->where(function($query) use($actionName) {
                         $query->where('type', 'controller')
