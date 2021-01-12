@@ -10,7 +10,7 @@
 ### Getting Started
 Install the package via composer, publish the vendor files, and migrate the new menu tables
 ```shell
-composer require -D aflanry/menus --dev
+composer require aflanry/menus --dev
 php artisan vendor:publish
 php artisan migrate
 ```

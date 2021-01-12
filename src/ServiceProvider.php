@@ -34,7 +34,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             __DIR__.'/js' => resource_path('assets/js/vendor/menu'),
             __DIR__.'/sass' => resource_path('assets/sass/vendor/menu'),
             __DIR__.'/config/menu.php' => config_path('menu.php')
-            __DIR__.'/database/seeders' => database_path('seeders/vendor/MenuSeeder.php'),
+            __DIR__.'/database/seeders' => database_path('seeds/vendor/MenuSeeder.php'),
         ]);
     }
 }
