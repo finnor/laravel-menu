@@ -3,10 +3,10 @@
 namespace AFlanry\Menu;
 
 use AFlanry\Menu\MenuBuilder;
-use Auth;
-use DB;
-use Illuminate\View\View;
 use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 
 class NavMenuComposer
 {
